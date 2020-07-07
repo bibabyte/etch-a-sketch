@@ -1,0 +1,48 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #DBDBDB;	
+}
+
+.gridContainer {
+	margin: 2vh auto 0px auto;
+	border: 5.5vh solid #CD2626;
+	border-bottom: 3vh;
+	//border-bottom: 30px solid #CD2626;
+	border-radius: 10px 10px 0px 0px;
+	background-color: white;
+	display: grid;
+	box-shadow: 2px 3px 5px inset;
+}
+
+#container {
+	//box-shadow: 5px 10px 8px;
+}
+
+.etchGridBox {
+	border: .1px solid #AAA;
+}
+
+.touched {
+	background-color: black;
+}
+
+.button {
+	border-radius: 50%;
+	padding: 40px 20px 40px;
+	background-color: white;
+	box-shadow: 5px 10px 8px;
+	border: none;
+	margin: 2vh;
+}
+
+.userInput{
+	margin: 0px auto;
+	background-color: #CD2626;
+	border-radius: 0px 0px 10px 10px;
+	padding: 0px 20px 0px 20px;
+	display: flex;
+	justify-content: space-between;
+	//box-shadow: 5px 10px 8px;
+	//width: 300px;
+}
