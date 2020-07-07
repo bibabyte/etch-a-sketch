@@ -4,18 +4,22 @@ const gridContainer = document.createElement('div');
 
 userInput.className = 'userInput';
 
+
 container.appendChild(gridContainer);
 container.appendChild(userInput);
-container.appendChild(output);
+
+//container.textContent = 'test.container';
+//gridContainer.textContet = 'text.gridContainer';
+//userInput.textContent = 'text.userInput';
 
 // Variables
 let userInputWidth;
 let colorSelected = false;
-let randomColor = `#d70`;
+let randomColor;
 
 // Size of default/start grid
 let gridWidth = 16;
-let gridHeight = Math.floor(gridWidth * 0.75);
+let gridHeight= Math.floor(gridWidth * 0.75);
 setGrid();
 
 function setGrid() {
@@ -31,13 +35,14 @@ function setGrid() {
 		gridContainer.style.width = `70vw`;
 		gridContainer.style.height = `52.5vw`;
 		userInputWidth = `${gridContainer.offsetWidth - 40}` + `px`;
-		userInpupt.style.width = userInputWidth;
-		
+		//userInput.style.width = `(${gridContainer.offsetWidth - 40})px`;
+		userInput.style.width = userInputWidth;
 	}
 	else {
 		gridContainer.style.width = `70vh`;
 		gridContainer.style.height = `52.5vh`;
 		userInputWidth = `${gridContainer.offsetWidth - 40}` + `px`;
+		//userInput.style.width = `(${gridContainer.offsetWidth - 40})px`;
 		userInput.style.width = userInputWidth;
 	}
 
@@ -51,6 +56,7 @@ function setGrid() {
 		gridContainer.appendChild(etchGrid);
 	}
 } 
+
 
 // Buttons to clear and change color
 let clearBtn = document.createElement('button');
@@ -72,7 +78,6 @@ userInput.appendChild(changeBtn);
 
 // Changes box color for touches to the screen.
 function touchStart(e) {
-//e.target.style.background = `green`;
 	if (!colorSelected){
 		e.target.style.background = `#000`;
 	}
@@ -94,12 +99,11 @@ function clear() {
 	while (gridContainer.hasChildNodes()){
 		gridContainer.removeChild(gridContainer.firstChild);
 	}	
-	gridHeight= Math.floor(gridWidth * 0.75);
+	gridHeight = Math.floor(gridWidth * 0.75);
 	setGrid(gridWidth);		
 	colorSelected = false;
 }
 
-// Generate a random color
 function getRandomColor() {
 	let hex = `0123456789ABCDEF`;
 	randomColor = `#`;
@@ -109,11 +113,6 @@ function getRandomColor() {
 	colorSelected = true;
 	return randomColor;
 }
-
-
-
-
-
 
 
 
@@ -143,3 +142,4 @@ function getRandomColor() {
 		output.textContent = output.textContent + `-------${e.changed.Touches.length}`; ///no
 	}
 }*/
+
