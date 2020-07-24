@@ -1,16 +1,11 @@
-const container = document.querySelector('#container');
+const container = document.querySelector('.etchContainer');
 const userInput = document.createElement('div');
 const gridContainer = document.createElement('div');
 
 userInput.className = 'userInput';
 
-
 container.appendChild(gridContainer);
 container.appendChild(userInput);
-
-//container.textContent = 'test.container';
-//gridContainer.textContet = 'text.gridContainer';
-//userInput.textContent = 'text.userInput';
 
 // Variables
 let userInputWidth;
